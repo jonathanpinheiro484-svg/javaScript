@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Classificação por Idade</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+
+<script>
+
+nome = prompt("Digite seu nome", "")
+idade = Number(prompt("Digite sua Idade", ""))
+
+if (idade <= 11)
+{
+    document.write(`
+    <div class="container mt-5">
+        <div class="card shadow-lg border-success">
+            <div class="card-header bg-success text-white text-center">
+                <h2>🧒 Classificação</h2>
+            </div>
+            <div class="card-body text-center">
+                <h3>Olá, ${nome}!</h3>
+                <p>Sua idade é <strong>${idade}</strong> anos.</p>
+                <h4 class="text-success">Você é uma CRIANÇA 👶</h4>
+
+                <button class="btn btn-success mt-3"
+                onclick="alert('Continue aproveitando sua infância! 😊')">
+                    😊 OK
+                </button>
+            </div>
+        </div>
+    </div>
+    `)
+}
+else if (idade <= 17)
+{
+    document.write(`
+    <div class="container mt-5">
+        <div class="card shadow-lg border-warning">
+            <div class="card-header bg-warning text-dark text-center">
+                <h2>🧑 Classificação</h2>
+            </div>
+            <div class="card-body text-center">
+                <h3>Olá, ${nome}!</h3>
+                <p>Sua idade é <strong>${idade}</strong> anos.</p>
+                <h4 class="text-warning">Você é um ADOLESCENTE 😎</h4>
+
+                <button class="btn btn-warning mt-3"
+                onclick="alert('Curta essa fase e estude bastante! 📚')">
+                    😎 OK
+                </button>
+            </div>
+        </div>
+    </div>
+    `)
+}
+else
+{
+    document.write(`
+    <div class="container mt-5">
+        <div class="card shadow-lg border-primary">
+            <div class="card-header bg-primary text-white text-center">
+                <h2>🧔 Classificação</h2>
+            </div>
+            <div class="card-body text-center">
+                <h3>Olá, ${nome}!</h3>
+                <p>Sua idade é <strong>${idade}</strong> anos.</p>
+                <h4 class="text-primary">Você é um ADULTO 💼</h4>
+
+                <button class="btn btn-primary mt-3"
+                onclick="alert('Parabéns! Continue conquistando seus objetivos! 🚀')">
+                    🚀 OK
+                </button>
+            </div>
+        </div>
+    </div>
+    `)
+}
+
+</script>
+
+</body>
+</html>

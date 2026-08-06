@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio de Correção</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-light">
+    <script>
+      let nomeAluno = prompt("Digite o nome do aluno:");
+      let nota1 = Number(prompt("Digite a primeira nota:"));
+      let nota2 = Number(prompt("Digite a segunda nota:"));
+      let media = (nota1 + nota2) / 2;
+      let situacao = "";
+
+      let classeResultado = "";
+      if (media >= 7) {
+        situacao == "Aprovado";
+        classeResultado = "success";
+      } else if (media >= 5 && media < 7) {
+        situacao == "Recuperação";
+        classeResultado = "warning";
+      } else 
+      {
+        situacao == "Reprovado";
+        classeResultado = "danger";
+      }
+
+      console.log(
+        ` Aluno: nomeAluno Primeira nota: ${nota1} Segunda nota: ${nota2} Média: ${media.toFixed(2)} Situação: ${situacao} `,
+      );
+
+      document.write(` <main class="container py-5"> 
+        <div class="card shadow"> <div class="card-header bg-primary text-white"> <h1 class="h4 mb-0">Resultado do aluno</h1> </div>
+         <div class="card-body"> <p><strong>Aluno:</strong> ${nomeAluno}</p> <p><strong>Primeira nota:</strong> ${nota1}</p> <p><strong>Segunda nota:</strong> ${nota2}</p> <p><strong>Média:</strong> ${media.toFixed(2)}</p> 
+            <div class="alert alert-classeResultado"> <strong>Situação:</strong> ${situacao} 
+                </div>
+                 </div> 
+                 </div> 
+                 </main> `);
+    </script>
+  </body>
+</html>

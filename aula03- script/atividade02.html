@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nome = prompt("Digita seu nome:", "");
+      let salario = Number(prompt("Digite seu salario:"));
+
+      let salarioTotal= salario +(salario*0.15);
+      let valorRajustado = (salario*0.15);
+      
+      let porcentagem = 15;
+
+      document.write(`Nome do funcionario: ${nome} <br>
+      Salario: ${salario} <br>
+      Resajuste: 15% <br>
+      Valor do Reajuste: ${valorRajustado} <br>
+      Salario atual: ${salarioTotal}`)
+    </script>
+  </body>
+</html>
