@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-secondary-subtle">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h2>Calculadora com Laços</h2>
+                    </div>
+
+                    <div class="card-body">
+                        <p class="text-center">
+                            Ao carregar a página será solicitado um número e serão exibidas
+                            as operações de Soma, Subtração, Multiplicação e Divisão.
+                        </p>
+
+                        <hr>
+
+                        <script>
+
+let numero = Number(prompt('Digite o numero:' ,''));
+
+for(let contador = 0; contador <= 10; contador ++){
+    let Resultado = numero + contador;
+    document.write(`${numero} + ${contador} = ${Resultado} <br>`)
+}
+
+document.write("<hr>");
+
+for(let contador = 0; contador <= 10; contador ++){
+    let Resultado = numero - contador;
+    document.write(`${numero} - ${contador} = ${Resultado} <br>`)
+}
+
+document.write("<hr>");
+
+for(let contador = 0; contador <= 10; contador ++){
+    let Resultado = numero * contador;
+    document.write(`${numero} * ${contador} = ${Resultado} <br>`)
+}
+
+document.write("<hr>");
+
+for(let contador = 0; contador <= 10; contador ++){
+    let Resultado = numero / contador;
+    document.write(`${numero} / ${contador} = ${Resultado} <br>`)
+}
+
+                        </script>
+
+                    </div>
+
+                    <div class="card-footer text-center">
+                        <small class="text-muted">Exercício em JavaScript + Bootstrap</small>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
