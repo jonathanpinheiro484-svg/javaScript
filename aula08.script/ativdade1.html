@@ -1,0 +1,63 @@
+<!doctype html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Relógio Digital</title> 
+  </head> 
+
+  <body> 
+
+    <style> 
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+        }
+
+        #display{ 
+            font-size: 70px; 
+            background-color: brown;
+            color: white;
+            padding: 25px 45px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.3);
+            border: 3px solid white;
+            text-align: center;
+            font-weight: bold;
+        } 
+
+    </style> 
+
+    <div id="display"></div> 
+
+    <script> 
+ 
+function relogio(){ 
+ 
+      let agora = new Date(); 
+      let hora = agora.getHours(); 
+      //   let minuto = agora.getMinutes(); 
+      let minuto = String( agora.getMinutes()).padStart(2, '0'); 
+      let segundo = String(agora.getSeconds()).padStart(2, '0'); 
+      // const agora = new Date(); 
+      // const hora = agora.getHours(); 
+ 
+      relogioCompleto = `${hora} : ${minuto} : ${segundo}`; 
+ 
+      document.getElementById('display').textContent = relogioCompleto; 
+} 
+ 
+relogio(); 
+ 
+setInterval(relogio, 1000); 
+
+    </script> 
+
+  </body> 
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de Perguntas</title>
+ 
+  <!-- Bootstrap usado apenas para organizar a apresentação visual. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+ 
+  <script>
+    // ==================================================
+    // Mini projeto bônus — Quiz de Perguntas
+    // ==================================================
+ 
+    // Guarda a quantidade de respostas corretas.
+    let acertos = 0;
+ 
+    // Guarda o prêmio acumulado.
+    let premio = 0;
+ 
+    // Verifica se a alternativa informada está correta.
+    function verificarResposta(resposta, respostaCorreta) {
+ 
+      // Retorna true quando as duas respostas forem iguais.
+      return resposta.trim().toUpperCase() === respostaCorreta;
+    }
+ 
+    // Faz uma pergunta e verifica a resposta do jogador.
+    function fazerPergunta(
+      pergunta,
+      alternativaA,
+      alternativaB,
+      alternativaC,
+      alternativaD,
+      respostaCorreta,
+      valor
+    ) {
+ 
+      // Mostra a pergunta e recebe a alternativa escolhida.
+      let resposta = prompt(`
+${pergunta}
+ 
+${alternativaA}
+${alternativaB}
+${alternativaC}
+${alternativaD}
+ 
+Digite A, B, C ou D:
+      `);
+ 
+      // Se o usuário cancelar, considera uma resposta vazia.
+      if (resposta === null) {
+        resposta = '';
+      }
+ 
+      // Usa uma função para verificar a resposta.
+      const acertou = verificarResposta(resposta, respostaCorreta);
+ 
+      // Atualiza a pontuação quando houver acerto.
+      if (acertou) {
+        acertos++;
+        premio += valor;
+        alert(`Resposta correta!\nPrêmio acumulado: R$ ${premio}`);
+      } else {
+        alert(`Resposta incorreta.\nAlternativa correta: ${respostaCorreta}`);
+      }
+    }
+ 
+    // Cria uma mensagem de acordo com o desempenho.
+    function criarMensagemFinal() {
+ 
+      if (acertos === 5) {
+        return 'Excelente! Você acertou todas as perguntas!';
+      }
+ 
+      if (acertos >= 3) {
+        return 'Muito bem! Foi uma ótima pontuação.';
+      }
+ 
+      return 'Boa tentativa! Na próxima você pode chegar ainda mais longe.';
+    }
+ 
+    // ==================================================
+    // Perguntas
+    // A mesma função é reutilizada cinco vezes.
+    // ==================================================
+ 
+    fazerPergunta(
+      '1. Qual planeta é conhecido como Planeta Vermelho?',
+      'A) Terra',
+      'B) Marte',
+      'C) Vênus',
+      'D) Júpiter',
+      'B',
+      1000
+    );
+    Pergunta(
+  '2. Qual é o maior planeta do Sistema Solar?',
+  'A) Terra',
+  'B) Saturno',
+  'C) Júpiter',
+  'D) Marte',
+  'C',
+  2000
+);
+
+Pergunta(
+  '3. Qual planeta é conhecido por seus anéis?',
+  'A) Mercúrio',
+  'B) Saturno',
+  'C) Vênus',
+  'D) Netuno',
+  'B',
+  3000
+);
+
+Pergunta(
+  '4. Qual é o planeta mais próximo do Sol?',
+  'A) Mercúrio',
+  'B) Terra',
+  'C) Marte',
+  'D) Júpiter',
+  'A',
+  4000
+);
+
+Pergunta(
+  '5. Qual é o planeta onde vivemos?',
+  'A) Marte',
+  'B) Vênus',
+  'C) Terra',
+  'D) Saturno',
+  'C',
+  5000
+);
+ 
+   
+ 
+    // Cria a mensagem exibida no resultado.
+    const mensagemFinal = criarMensagemFinal();
+ 
+    // Exibe o resultado usando classes simples do Bootstrap.
+    document.write(`
+      <main class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+              <div class="card-body p-4 text-center">
+                <h1 class="h3 mb-4">Resultado do Quiz</h1>
+ 
+                <p class="fs-5">
+                  Você acertou <strong>${acertos} de 5</strong> perguntas.
+                </p>
+ 
+                <p class="fs-4">
+                  Prêmio acumulado: <strong>R$ ${premio}</strong>
+                </p>
+ 
+                <p class="mt-4 mb-0">
+                  ${mensagemFinal}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    `);
+  </script>
+ 
+</body>
+</html>
+ 

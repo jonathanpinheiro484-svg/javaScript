@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+function mostrarProduto (nome, preco){
+    document.write(`
+    <p> Produto: ${nome} </p>
+    <p> Produto: ${preco} </p>
+    <hr>
+    `);
+}
+
+// mostrarProduto ("Mouse", 80);
+// mostrarProduto ("Teclado", 150);
+
+let Produto = prompt("Digita o nome do produto")
+let preco = prompt("Digita o valor:")
+
+mostrarProduto(Produto, preco)
+
+
+
+</script>
+
+
+</body>
+</html>
