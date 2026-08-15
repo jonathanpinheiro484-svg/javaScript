@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+
+<script>
+    const produtos = ["ARROZ", "FEIJÃO", "LEITE", "CAFÉ"];
+
+    let pesquisar = prompt("Digite um produto").toUpperCase();
+    let encontrar = produtos.includes(pesquisar);
+
+    if (encontrar != true) {
+        document.write(`Produto: <b> ${pesquisar} </b> nao encontrado`);
+    } else {
+        document.write(`Produto: <b> ${pesquisar} </b> encontrado`);
+    }
+
+    // alert(produtos);
+
+    // let adicionar = prompt("Digite um produto").toUpperCase();
+    // adicionar = produtos.push(adicionar);
+    // alert(produtos);
+
+</script>
+
+</body>
+</html>

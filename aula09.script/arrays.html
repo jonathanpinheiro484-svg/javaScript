@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+       
+  <body>
+    <script>
+      // arrays
+      let produto1 = "Arroz";
+      let produto2 = "Feijão";
+      let produto3 = "Café";
+      let produto4 = "Leite";
+      console.log(produto1);
+      console.log(produto4);
+      console.log(produto3);
+      console.log(produto4);
+      const produtos = ["Arroz", "Feijão", "Café", "Leite"];
+      console.log(produtos);
+      console.log(typeof produtos);
+      console.log(produtos[3]);
+ 
+      const tempo = new Date();
+      const diaSemana = tempo.getDay(); // dia da semana 7
+      const mes = tempo.getMonth() + 1; // mes mais 1
+      const dia = tempo.getDate(); // dia
+      const ano = tempo.getFullYear(); // ano
+ 
+      console.log(diaSemana);
+      console.log(mes);
+      console.log(dia);
+      console.log(ano);
+ 
+      let dia1 = "Segunda";
+      let dia2 = "Terça";
+      let dia3 = "Quarta";
+      let dia4 = "Quinta";
+      let dia5 = "Sexta";
+      let dia6 = "Sabado";
+      let dia7 = "Domingo";
+      console.log(dia1);
+      console.log(dia2);
+      console.log(dia3);
+      console.log(dia4);
+      console.log(dia5);
+      console.log(dia6);
+      console.log(dia7);
+      console.log("Hoje é " + dia4);
+      const diasSemana = [
+        "Segunda",
+        "Terça",
+        "Quarta",
+        "Quinta",
+        "Sexta",
+        "Sabado",
+        "Domingo",
+      ];
+ 
+     
+      function mostrarData() {
+        const tempo = new Date();
+        const diaSemana = tempo.getDay(); // dia da semana 7
+        const mes = tempo.getMonth() + 1; // mes mais 1
+        const dia = tempo.getDate(); // dia
+        const ano = tempo.getFullYear(); // ano
+ 
+        const diasSemana = [
+          "Segunda",
+          "Terça",
+          "Quarta",
+          "Quinta",
+          "Sexta",
+          "Sabado",
+          "Domingo",
+        ];
+ 
+        const todosmeses = [
+          "Janeiro",
+          "Fevereiro",
+          "Março",
+          "Abril",
+          "Maio",
+          "Junho",
+          "Julho",
+          "Agosto",
+          "Setembro",
+          "Outubro",
+          "Novembro",
+          "Dezembro",
+        ];
+        console.log(todosmeses[mes - 1]);
+        console.log(
+          "Hoje é " +
+            diasSemana[diaSemana - 1] +
+            " dia " +
+            dia +
+            " de " +
+            todosmeses[mes - 1] +
+            " de " +
+            ano,
+        );
+      }
+      mostrarData();
+    </script>
+  </body>
+</html>
+ 
+ 
