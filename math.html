@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+
+let numero = Number(prompt("Digite um valor:"));
+
+document.write(`
+<h2>Math.floor</h2>
+<h3>Arrendondar um número para baixo</h3>
+<p>Número informado ${numero}</p>
+<P>Resultado:${Math.floor(numero)}</P>
+<hr>
+`);
+
+document.write(`
+<h2>Math.ceil</h2>
+<h3>Arrendondar um número para baixo</h3>
+<p>Número informado ${numero}</p>
+<P>Resultado:${Math.ceil(numero)}</P>
+<hr>
+`);
+
+document.write(`
+<h2>Math.round</h2>
+<h3>Arredoda para número inteiro mais próximo</h3>
+<p>Número informado ${numero}</p>
+<P>Resultado:${Math.round(numero)}</P>
+<hr>
+`);
+
+let maior = Math.max(10, 25, 8, 40);
+let menor = Math.min(10, 25, 8, 40);
+
+document.write(`
+<p> Maior valor: ${maior} </p>
+
+<p> Maior valor: ${menor} </p>
+
+`);
+
+let valor = -15;
+
+document.write(`
+<p> valor informado: ${valor} </p>
+<h2Math.abs retorna o valor absoluto  ou seja  remove o sinal de negativo </h2>
+<p>Resultado: ${Math.abs(valor)}</p>
+
+`);
+
+</script>
+</body>
+</html>

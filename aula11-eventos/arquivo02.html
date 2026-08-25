@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="lampada" src="../imagens/lamp1.jpg">
+
+    <button onclick="Ligado()">Ligado</button>
+    <button onclick="desligado()">desligado</button>
+
+    <script>
+      let lampada = document.getElementById("lampada");
+
+      function Ligado() {
+        lampada.src = "../imagens/lamp2.jpg";
+      }
+      function desligado() {
+        lampada.src = "../imagens/lamp1.jpg";
+      }
+    </script>
+  </body>
+</html>

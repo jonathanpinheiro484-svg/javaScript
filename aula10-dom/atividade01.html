@@ -1,0 +1,65 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #container{
+            display: flex;
+            padding: 10px;                    
+        }
+        #grupo01{
+            text-align: center;
+            width: 200px;
+            padding: 20px;
+            background-color: rgb(255, 180, 241);
+        }
+                #grupo02{
+                    text-align: center;
+            padding: 20px;
+            width: 200px;
+            background-color: rgb(255, 204, 65);
+        }
+ 
+    </style>
+   
+    <div id="container">
+        <div id="grupo01"> Grupo 01 </div>
+        <div id="grupo02"> Grupo 02 </div>
+    </div>
+ 
+    <script>
+ 
+        const grupo01 = document.getElementById('grupo01');
+        const grupo02 = document.getElementById('grupo02');
+ 
+        let nomeUsuario = prompt('Digite o nome:');
+ 
+        if(nomeUsuario === 'Patrick'){
+            grupo01.innerHTML = '<b>Patrick</b>';
+        }else
+        if(nomeUsuario === 'Renan'){
+            grupo01.innerHTML = '<b>Renan</b>';
+        }else
+        if(nomeUsuario === 'Pedro'){
+            grupo01.innerHTML = '<b>Pedro</b>';
+        }else
+        if(nomeUsuario === 'Carlos'){
+            grupo02.innerHTML = '<b>Carlos</b>';
+        }else
+        if(nomeUsuario === 'TK'){
+            grupo02.innerHTML = '<b>TK</b>';
+        }else
+        if(nomeUsuario === 'Jonathan'){
+            grupo02.innerHTML = '<b>Jonathan</b>';
+        }else{
+            alert('Não conheço!')
+        }
+       
+    </script>
+ 
+</body>
+</html>

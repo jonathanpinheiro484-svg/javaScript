@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" id="campo" placeholder="Digite algo">
+
+<p id="saida">Aguardando tecla...</p>
+
+<script>
+
+let campo = document.getElementById('campo');
+let saida = document.getElementById('saida');
+
+campo.addEventListener('keyup', function(event){
+saida.textContent = `Tecla pressionada: ${event.key}`;
+});
+
+
+</script>
+</body>
+</html>

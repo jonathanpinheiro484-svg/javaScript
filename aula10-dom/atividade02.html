@@ -1,0 +1,41 @@
+<html lang="en">
+  <head> </head>
+
+  <body>
+    <div id="container"></div>
+
+    <script>
+      const container = document.getElementById("container");
+      const tempo = new Date();
+      const dia = tempo.getDay();
+      console.log(dia);
+
+      switch (dia) {
+        case 0:
+          nomeDia = "Domingo";
+          break;
+        case 1:
+          nomeDia = "Segunda";
+          break;
+          case 2:
+          nomeDia = "Terça-feira";
+          break;
+          case 3:
+          nomeDia = "Quarta-feira";
+          break;
+          case 4:
+          nomeDia = "Quinta-feira";
+          break;
+          case 5:
+          nomeDia = "Sexta-feira";
+          break;
+          case 6:
+          nomeDia = "Sabado";
+          break;
+          default:"Erro"
+
+      }
+      container.innerHTML = nomeDia;
+    </script>
+  </body>
+</html>
